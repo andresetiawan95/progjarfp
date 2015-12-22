@@ -8,8 +8,8 @@ ip=0
 port = 8580
 tier2 = []
 for x in range(5):
-	tier2.append (webserveraddr)
-	tier2.append ("%d"%(8581+x))
+	tier2.append (webserveraddr + ":%d"%(8581+x))
+
 
 
 class Server(tierhandler):
