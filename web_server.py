@@ -15,19 +15,19 @@ while True:
     	# Receive the data in small chunks and retransmit it
     	# while True:
         data = connection.recv(2048)
-	print data
+	#print data
 	direktori = data.split()
-	print direktori
+	#print direktori
 	dir1=direktori[1]
 	if direktori[1][0]=='/' :
 		try :
-			fopen=open(direktori[1][1:] + ".jpg","rb")
+			fopen=open("capture.jpg","rb")
 			gambar = fopen.read()
 			respon ="\HTTP/1.1 200 OK \n\n%s"%gambar
 			fopen.close()
 		except :
 			respon = "\HTTP/1.1 200 OK \n\ngambar tidak ada"
-	print direktori[1][1:]  	
+	#print direktori[1][1:]  	
 	#respon = "Sukses Menyambung ke Web Server"
 	
 	connection.send(respon)
