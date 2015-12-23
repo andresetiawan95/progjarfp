@@ -8,9 +8,13 @@ port = 8822
 webserver = []
 for i in range(10):
 	webserver.append('IP:PORT')
-for i in range (6)
+for i in range (6):
 	webserver.append('IP:PORT')
-for i in range (4)
+for i in range (4):
+	webserver.append('IP:PORT')
+for i in range (4):
+	webserver.append('IP:PORT')
+for i in range (4):
 	webserver.append('IP:PORT')
 
 class Server(serverhandler):
