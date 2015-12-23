@@ -5,7 +5,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 webserveraddr = socket.gethostbyname(socket.gethostname())
 server_address = (webserveraddr, 8585)
 sock.bind(server_address)
-sock.listen(10)
+sock.listen(1005)
 print >>sys.stderr, 'starting up on %s port %s' % server_address
 # Listen for incoming connections
 while True:
@@ -20,14 +20,13 @@ while True:
 	direktori = data.split()
 	#print direktori
 	#dir1=direktori[1]
-	if direktori[1][0]=='/' :
-		try :
-			fopen=open("capture.jpg","rb")
-			gambar = fopen.read()
-			respon ="\HTTP/1.1 200 OK \n\n%s"%gambar
-			fopen.close()
-		except :
-			respon = "\HTTP/1.1 200 OK \n\ngambar tidak ada"
+	try :
+		fopen=open("capture.jpg","rb")
+		gambar = fopen.read()
+		respon ="\HTTP/1.1 200 OK \n\n%s"%gambar
+		fopen.close()
+	except :
+		respon = "\HTTP/1.1 200 OK \n\ngambar tidak ada"
 	#print direktori[1][1:]  	
 	#respon = "Sukses Menyambung ke Web Server"
 	
