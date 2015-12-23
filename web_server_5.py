@@ -19,7 +19,7 @@ while True:
 	#print data
 	direktori = data.split()
 	#print direktori
-	dir1=direktori[1]
+	#dir1=direktori[1]
 	if direktori[1][0]=='/' :
 		try :
 			fopen=open("capture.jpg","rb")
