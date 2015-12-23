@@ -3,14 +3,15 @@ import sys
 import BaseHTTPServer
 import httplib
 import threading
+import Queue
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 webserveraddr = socket.gethostbyname(socket.gethostname())
 server_address = (webserveraddr, 8282)
 sock.bind(server_address)
-sock.listen(1)
+sock.listen(100000)
 
 webserver = []
-port = 8822
+#port = 8822
 
 for i in range(5):
 	webserver.append('http://192.168.1.5:8581')
@@ -28,9 +29,12 @@ print >>sys.stderr, 'starting up on %s port %s' % server_address
 
 global ip
 ip=0
+queueclient = Queue.Queue(maxsize=100000)
 while True:
 	connection, client_address = sock.accept()
-	data = connection.recv(2048)
+	queueclient.put(connection)
+	getqueue = queueclient.get()
+	data = getqueue.recv(2048)
 	#print data
 	direktori = data.split()
 	try :
