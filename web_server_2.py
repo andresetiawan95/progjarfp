@@ -3,7 +3,7 @@ import sys,socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Bind the socket to the port
 webserveraddr = socket.gethostbyname(socket.gethostname())
-server_address = (webserveraddr, 8582)
+server_address = (socket.gethostbyname(socket.gethostname()), 8582)
 sock.bind(server_address)
 sock.listen(10)
 print >>sys.stderr, 'starting up on %s port %s' % server_address
@@ -19,7 +19,6 @@ while True:
 	#print data
 	direktori = data.split()
 	#print direktori
-	dir1=direktori[1]
 	if direktori[1][0]=='/' :
 		try :
 			fopen=open("capture.jpg","rb")
