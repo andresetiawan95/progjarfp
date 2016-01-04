@@ -8,7 +8,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 webserveraddr = socket.gethostbyname(socket.gethostname())
 server_address = (webserveraddr, 8580)
 sock.bind(server_address)
-sock.listen(100000)
+sock.listen(50000)
 
 webserver = []
 #port = 8822
