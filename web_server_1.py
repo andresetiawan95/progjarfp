@@ -10,9 +10,9 @@ print >>sys.stderr, 'starting up on %s port %s' % server_address
 # Listen for incoming connections
 while True:
     	# Wait for a connection
-    	print >>sys.stderr, 'waiting for a connection'
+    	#print >>sys.stderr, 'waiting for a connection'
     	connection, client_address = sock.accept()
-    	print >>sys.stderr, 'connection from', client_address
+    	#print >>sys.stderr, 'connection from', client_address
     	# Receive the data in small chunks and retransmit it
     	# while True:
         data = connection.recv(2048)
