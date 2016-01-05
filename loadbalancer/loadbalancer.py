@@ -14,28 +14,28 @@ webserver = []
 #port = 8822
 
 for i in range(5):
-	webserver.append('http://192.168.43.52:8581')
+	webserver.append('http://10.151.43.113:8581')
 
 for i in range (3):
-	webserver.append('http://192.168.43.52:8582')
+	webserver.append('http://10.151.43.113:8582')
 
 for i in range (3):
-	webserver.append('http://192.168.43.52:8583')
+	webserver.append('http://10.151.43.113:8583')
 for i in range (3):
-	webserver.append('http://192.168.43.52:8584')
+	webserver.append('http://10.151.43.113:8584')
 for i in range (3):
-	webserver.append('http://192.168.43.52:8585')
+	webserver.append('http://10.151.43.113:8585')
 
 for i in range(5):
-	webserver.append('http://192.168.43.206:8581')
+	webserver.append('http://10.151.43.129:8581')
 for i in range (3):
-	webserver.append('http://192.168.43.206:8582')
+	webserver.append('http://10.151.43.129:8582')
 for i in range (3):
-	webserver.append('http://192.168.43.206:8583')
+	webserver.append('http://10.151.43.129:8583')
 for i in range (3):
-	webserver.append('http://192.168.43.206:8584')
+	webserver.append('http://10.151.43.129:8584')
 for i in range (3):
-	webserver.append('http://192.168.43.206:8585')
+	webserver.append('http://10.151.43.129:8585')
 
 	
 print >>sys.stderr, 'starting up on %s port %s' % server_address
